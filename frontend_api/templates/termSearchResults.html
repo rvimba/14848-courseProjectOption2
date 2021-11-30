@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+    <title>Search Results</title>
+</head>
+  
+<body>
+    <h2>You Searched for the term: {{ searchTerm }}</h2>
+    <h2>Your search was executed in {{ searchTime }} ms</h2>
+        <table>
+            <tr>
+                <th>Doc ID</th>
+                <th>Doc Folder</th> 
+                <th>Doc Name</th>
+                <th>Frequencies</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td> {{ folder1 }} </td> 
+                <td>{{ name1 }}</td>
+                <td>{{ freq1 }}</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>{{ folder2 }}</td> 
+                <td>{{ name2 }}</td>
+                <td>{{ freq2 }}</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>{{ folder3 }}</td> 
+                <td>{{ name3 }}</td>
+                <td>{{ freq3 }}</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>{{ folder4 }}</td> 
+                <td>{{ name4 }}</td>
+                <td>{{ freq4 }}</td>
+            </tr>
+        </table>
+        <form action="/goBackToSearch" 
+            enctype="text/plain" method="POST">
+        <input type="submit" value="Go Back To Search"> 
+    </form>
+</body>
+  
+</html>
